@@ -77,14 +77,14 @@ public class Contact {
     @Override
     public String toString() {
         return "Contact{" +
-                "firtsName=' " + firstName + '\'' +
-                ", lastName=' " + lastName + '\'' +
-                ", address=' " + address + '\'' +
-                ", city=' " + city + '\'' +
-                ", state=' " + state + '\'' +
-                ", zip=' " + zip + '\'' +
-                ", phoneNum=' " + phoneNum + '\'' +
-                ", email=' " + email + '\'' +
+                "firtsName = '" + firstName + '\'' +
+                ", lastName = '" + lastName + '\'' +
+                ", address = '" + address + '\'' +
+                ", city = '" + city + '\'' +
+                ", state = '" + state + '\'' +
+                ", zip = '" + zip + '\'' +
+                ", phoneNum = '" + phoneNum + '\'' +
+                ", email = '" + email + '\'' +
                 '}';
     }
 }

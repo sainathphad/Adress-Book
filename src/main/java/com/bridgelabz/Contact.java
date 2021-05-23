@@ -26,7 +26,7 @@ public class Contact {
         this.lastName = lastName;
     }
 
-    public String getAdress() {
+    public String getAddress() {
         return address;
     }
 
@@ -77,7 +77,7 @@ public class Contact {
     @Override
     public String toString() {
         return "Contact{" +
-                "firtsName = '" + firstName + '\'' +
+                "firstName = '" + firstName + '\'' +
                 ", lastName = '" + lastName + '\'' +
                 ", address = '" + address + '\'' +
                 ", city = '" + city + '\'' +

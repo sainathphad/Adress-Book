@@ -72,4 +72,11 @@ public class AddressBook {
         }
         return true;
     }
+    private void delete() {
+        System.out.println("Enter first Name to delete");
+        String firstName = scanner.nextLine();
+        if (contact != null && firstName.equals(contact.getFirstName())) {
+            contact = null;
+        }
+    }
 }

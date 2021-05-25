@@ -1,11 +1,10 @@
 package com.bridgelabz;
 
-import java.util.Objects;
 import java.util.Scanner;
 
 public class AddressBook {
 
-    Contact contact;
+    Contact contact = new Contact();
     Scanner scanner = new Scanner(System.in);
     public void add() {
         contact = new Contact();
@@ -25,58 +24,82 @@ public class AddressBook {
         String phoneNum = scanner.nextLine();
         System.out.println("Enter Email");
         String email = scanner.nextLine();
-        contact.setFirstName("abc");
-        contact.setLastName("xyz");
-        contact.setAddress("xyc jkl");
-        contact.setCity("pqr");
-        contact.setState("asd");
-        contact.setZip("4003");
-        contact.setPhoneNum("513412");
-        contact.setEmail("xyz@mail");
+        contact.setFirstName(firstName);
+        contact.setLastName(lastName);
+        contact.setAddress(address);
+        contact.setCity(city);
+        contact.setState(state);
+        contact.setZip(zip);
+        contact.setPhoneNum(phoneNum);
+        contact.setEmail(email);
         System.out.println(contact);
 
     }
     public boolean edit() {
-        System.out.println("Enter first Name");
-        String firstName = scanner.nextLine();
-        if(firstName.equals(contact.getFirstName())){
+        System.out.println("Enter first Name To Edit");
+        String firstName = scanner.next();
+        if(!firstName.equals(contact.getFirstName())){
             return false;
         }
-        System.out.println("Which details you want to edit:");
-        System.out.println("press 1 for changing first name:");
-        System.out.println("press 2 for changing last name:");
-        System.out.println("press 3 for changing address:");
-        System.out.println("press4 for changing city:");
-        System.out.println("press 5 for changing state:");
-        System.out.println("press 6 for changing zip num:");
-        System.out.println("press 7 for changing phone num:");
-        System.out.println("press 8 for changing email:");
+        System.out.println( " Which details you want to edit: " );
+        System.out.println( " 1 for changing first name: " );
+        System.out.println( " 2 for changing last name: " );
+        System.out.println( " 3 for changing address: " );
+        System.out.println( " 4 for changing city: " );
+        System.out.println( " 5 for changing state: " );
+        System.out.println( " 6 for changing zip num: " );
+        System.out.println( " 7 for changing phone num: " );
+        System.out.println( " 8 for changing email: " );
+
+        System.out.println( " Your Choice " );
         int choice = Integer.valueOf(scanner.next());
         switch (choice){
-            case 1: contact.setFirstName(scanner.nextLine());
+            case 1:
+                System.out.println( " Enter New Name " );
+                contact.setFirstName(scanner.next());
+                System.out.println( " First Name changed " );
                 break;
-            case 2: contact.setLastName(scanner.nextLine());
+            case 2:
+                System.out.println( " Enter New Last Name " );
+                contact.setLastName(scanner.next());
+                System.out.println( " Last Name Changed " );
                 break;
-            case 3: contact.setAddress(scanner.nextLine());
+            case 3:
+                System.out.println( " Enter New Address " );
+                contact.setAddress(scanner.next());
+                System.out.println( " Address Changed " );
                 break;
-            case 4: contact.setCity(scanner.nextLine());
+            case 4:
+                System.out.println( " Enter New City " );
+                contact.setCity(scanner.next());
+                System.out.println( " City Name Changed " );
                 break;
-            case 5: contact.setState(scanner.nextLine());
+            case 5:
+                System.out.println( " Enter New State " );
+                contact.setState(scanner.next());
+                System.out.println( " State Name Changed " );
                 break;
-            case 6: contact.setZip(scanner.nextLine());
+            case 6:
+                System.out.println( " Enter New Zip Num " );
+                contact.setZip(scanner.next());
+                System.out.println( " Zip Num Changed " );
                 break;
-            case 7: contact.setPhoneNum(scanner.nextLine());
+            case 7:
+                System.out.println( " Enter New Phone Num " );
+                contact.setPhoneNum(scanner.next());
+                System.out.println( " Phone Num Changed " );
                 break;
-            case 8: contact.setEmail(scanner.nextLine());
+            case 8:
+                System.out.println( " Enter New Email " );
+                contact.setEmail(scanner.next());
+                System.out.println( " Email Changed " );
+                break;
+            default:
+                System.out.println("Invalid Option");
                 break;
         }
         return true;
     }
-    private void delete() {
-        System.out.println("Enter first Name to delete");
-        String firstName = scanner.nextLine();
-        if (contact != null && firstName.equals(contact.getFirstName())) {
-            contact = null;
-        }
-    }
+
 }
+

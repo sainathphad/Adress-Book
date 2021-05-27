@@ -97,7 +97,7 @@ public class AddressBook {
                 System.out.println(" Email Changed ");
                 break;
             default:
-                System.out.println("Invalid Option");
+                System.out.println("Invalid Option \n Valid Options Are : 1, 2, 3, 4, 5, 6, 7, 8");
                 break;
         }
         return true;
@@ -106,11 +106,12 @@ public class AddressBook {
     public void delete() {
         System.out.println("Enter first Name to delete");
         String firstName = scanner.next();
+
         if (contact != null && firstName.equals(contact.getFirstName())) {
             contact = null;
             System.out.println("Contact Deleted");
         } else {
-            System.out.println("Invalid Name");
+            System.out.println("Invalid Name \n Please Enter Valid Name");
         }
     }
 }

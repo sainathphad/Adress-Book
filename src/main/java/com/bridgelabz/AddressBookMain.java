@@ -9,7 +9,8 @@ public class AddressBookMain {
         System.out.println("Welcome To Address Book Program");
         AddressBook addressBook = new AddressBook();
 
-        System.out.println(" Enter Option : 1.To Add Contact 2.To Edit Contact 3.To Delete Contact");
+        System.out.println(" Menu: Choose From Following Option \n 1.To Add Contact \n " +
+                                                "2.To Edit Contact \n 3.To Delete Contact");
 
         int menu = Integer.valueOf(scanner.next());
         switch (menu) {
